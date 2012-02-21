@@ -79,6 +79,12 @@ vows.describe('JustintvStrategy').addBatch({
         assert.equal(profile.username, 'justin');
         assert.equal(profile.displayName, 'The JUST UN');
       },
+      'should set raw property' : function(err, profile) {
+        assert.isString(profile._raw);
+      },
+      'should set json property' : function(err, profile) {
+        assert.isObject(profile._json);
+      },
     },
   },
   
